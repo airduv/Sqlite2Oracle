@@ -74,4 +74,13 @@
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
       <url n="pomfileURL" path="pom.xml"/>
    </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="name" v="Default"/>
+            <url n="targetURL" path="src/com/remi/sqlite2ora/Main.java"/>
+         </hash>
+      </hash>
+   </hash>
 </jpr:project>
