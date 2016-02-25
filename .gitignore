@@ -1,0 +1,10 @@
+# Repertoires de versioning
+.svn/
+.git/
+# Repertoires ADF / Jdev
+.data/
+classes/
+deploy/
+target/
+temp/
+sharedLib/
