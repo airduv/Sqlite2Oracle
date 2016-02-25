@@ -17,7 +17,7 @@ import java.sql.Connection;
          connection = DriverManager.getConnection("jdbc:sqlite:C:\\MM-Copie.DB");  
          statement = connection.createStatement();  
          resultSet = statement  
-                 .executeQuery("SELECT COUNT(*) NB FROM SONGS");  
+                 .executeQuery("SELECT COUNT(1) NB FROM SONGS");  
          while (resultSet.next()) 
          {  
              System.out.println("NB ROW : "+resultSet.getString("NB"));  
