@@ -25,12 +25,13 @@ public class Main {
                 System.out.println("TABLE : " + tabName);
                 // Liste des colonnes
                 stmt2 = connection.createStatement();
-                rsColumns = stmt2.executeQuery("SELECT * FROM "+tabName+" WHERE 0");
-                for(int i = 1; i <=  rsColumns.getMetaData().getColumnCount(); i++)
-                {
-                    System.out.println(" - col : "+rsColumns.getMetaData().getColumnName(i));
+                rsColumns = stmt2.executeQuery("PRAGMA table_info(" + tabName + ")");
+                while (rsColumns.next()) {
+                    System.out.println(" - col : " + rsColumns.getInt("cid") + " -> " + rsColumns.getString("name") +
+                                       (rsColumns.getBoolean("pk") ? " (PK)" : ""));
+
                 }
-                // rsColumns = statement.executeQuery("PRAGMA table_info(" + tabName + ")");
+
             }
         } catch (Exception e) {
             e.printStackTrace();
