@@ -1,2 +1,2 @@
 # Sqlite2Oracle
-SQLite to Oracle Tools using JDBC
+SQLite to Oracle Migration Tools (using JDBC)
